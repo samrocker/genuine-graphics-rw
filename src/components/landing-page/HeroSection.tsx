@@ -8,20 +8,17 @@ import { BrandLogos } from "@/constants";
 
 const HeroSection = () => {
   return (
-    <section className="w-screen h-screen flex-center flex-col gap-5 relative overflow-hidden">
+    <section className="w-screen h-screen flex-center flex-col relative overflow-hidden">
       <GridPattern
-        width={30}
-        height={30}
-        x={-1}
-        y={-1}
+        width={80}
+        height={80}
+        y={-300}
         strokeDasharray={"4 2"}
         className={cn(
-          "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]"
         )}
       />
-      <div
-        className="absolute left-[-200px] bottom-10 z-[-1] w-[15rem] md:w-[20rem] lg:w-[25rem] rotate-45 duration-300"
-      >
+      <div className="absolute left-[-200px] bottom-10 z-[-1] w-[15rem] md:w-[20rem] lg:w-[25rem] rotate-45 duration-300">
         <Image
           src="/images/crystal-left.png"
           alt="hero-crystal-left"
@@ -30,9 +27,7 @@ const HeroSection = () => {
           className="w-full"
         />
       </div>
-      <div
-        className="absolute right-[-100px] lg:right-[-130px] top-36 lg:top-48 z-[-1] w-[15rem] md:w-[20rem] lg:w-[25rem] rotate-90 duration-300"
-      >
+      <div className="absolute right-[-100px] lg:right-[-130px] top-36 lg:top-48 z-[-1] w-[15rem] md:w-[20rem] lg:w-[25rem] rotate-90 duration-300">
         <Image
           src="/images/crystal-right.png"
           alt="hero-crystal-right"
@@ -42,22 +37,22 @@ const HeroSection = () => {
         />
       </div>
       <main className="max-w-[1440px] m-auto">
-        <div className="px-5 py-7 w-full flex-center flex-col gap-5">
-          <h1 className="text-3xl md:text-4xl lg:text-6xl text-white text-center font-bold max-w-[1000px]">
+        <div className="px-5 py-7 w-full flex-center flex-col gap-12 mt-48">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl text-white text-center font-bold max-w-[1100px]">
             Transform Your Discord Shop into stunning{" "}
             <span className="text-gradient">brand</span>
           </h1>
-          <p className="text-sm font-medium text-white max-w-[500px] text-center">
+          <p className="text-lg font-medium text-neutral-400 max-w-[500px] text-center">
             Elevate your Discord server and marketplace with custom graphics,
             designed to make your brand stand out!
           </p>
           <div>
-            <Button className="px-5 py-5 bg-gradient text-white font-bold">
+            <Button className="px-7 py-6 bg-gradient text-black text-lg font-bold">
               Create a Ticket
             </Button>
           </div>
         </div>
-        <div className="px-5 py-5 h-fit w-full hidden md:flex flex-col gap-5 items-center justify-center md:mt-10">
+        <div className="px-5 py-5 h-fit w-screen max-w-[1440px] hidden md:flex flex-col gap-5 items-center justify-center md:mt-32">
           <div className="py-5 w-full flex-center gap-7">
             <span className="h-1 w-20 flex-center bg-orange-600 rounded-full" />
             <h1 className="text-lg md:text-2xl text-white text-center font-medium">

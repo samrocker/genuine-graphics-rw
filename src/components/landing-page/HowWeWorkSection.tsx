@@ -1,16 +1,12 @@
-"use client"
+"use client";
 import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 
 const HowWeWorkSection = () => {
   return (
-    <section 
-      className="min-h-fit w-screen mt-10 relative overflow-hidden"
-    >
-      <div
-        className="absolute right-[-100px] md:right-[-150px] top-[22%] md:top-[10%] z-[-1] w-[13rem] md:w-[17rem] lg:w-[20rem] rotate-[230deg] duration-300"
-      >
+    <section className="min-h-fit w-screen mt-20 relative overflow-hidden">
+      <div className="absolute right-[-100px] md:right-[-150px] top-[22%] md:top-[10%] z-[-1] w-[13rem] md:w-[17rem] lg:w-[20rem] rotate-[230deg] duration-300">
         <Image
           src="/images/crystal-left.png"
           alt="hero-crystal-left"
@@ -38,26 +34,31 @@ const HowWeWorkSection = () => {
             </Button>
           </div>
         </div>
-        <div className="px-5 py-10 min-h-fit w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-content-between mb-10">
-          {[{
+        <div className="px-5 py-20 min-h-fit w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-content-between mb-10">
+          {[
+            {
               icon: "/icons/rocket-2-fill.svg",
               title: "Understanding your business",
-              description: "We take the time to understand your brand's unique identity, ensuring every design aligns perfectly with your vision and goals.",
-              showArrow: true
+              description:
+                "We take the time to understand your brand's unique identity, ensuring every design aligns perfectly with your vision and goals.",
+              showArrow: true,
             },
             {
               icon: "/icons/suitable.png",
               title: "Perfect Design Selection",
-              description: "We'll help you choose the perfect designs that align with your brand's personality, ensuring a cohesive and impactful visual identity.",
-              showArrow: true
+              description:
+                "We'll help you choose the perfect designs that align with your brand's personality, ensuring a cohesive and impactful visual identity.",
+              showArrow: true,
             },
             {
               icon: "/icons/rocket-2-fill.svg",
               title: "Easy Turnaround",
-              description: "With our new policy and TOS, we will deliver all the work between 2-5 days. There may be extra time for specific works and designs.",
-              showArrow: false
-            }].map((item, idx) => (
-            <div 
+              description:
+                "With our new policy and TOS, we will deliver all the work between 2-5 days. There may be extra time for specific works and designs.",
+              showArrow: false,
+            },
+          ].map((item, idx) => (
+            <div
               key={idx}
               className="flex flex-col gap-7 items-start justify-center"
             >

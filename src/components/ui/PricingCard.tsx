@@ -13,14 +13,18 @@ const PricingCard = ({
   keyPoints,
 }: PricingCardProps) => {
   return (
-    <div className="px-7 py-10 min-h-fit w-full max-w-[300px] flex flex-col gap-8 bg-[#222222] items-start justify-center rounded-xl">
+    <div className="px-7 py-10 min-h-fit w-screen max-w-[430px] flex flex-col gap-8 bg-[#222222] items-start justify-center rounded-xl">
       {/* Header Section */}
       <div className="w-full flex flex-col gap-5 items-start">
         <div className="w-full flex justify-between items-center">
-          <h1 className="text-2xl text-white font-medium">{title}</h1>
-          <Button className="text-white font-bold bg-gradient">Rebrand</Button>
+          <h1 className="text-4xl text-white font-medium">{title}</h1>
+          <Button className="px-5 py-5 bg-gradient text-black font-bold">
+            Rebrands
+          </Button>
         </div>
-        <p className="text-sm text-neutral-400 text-left max-w-[300px]">{description}</p>
+        <p className="text-sm text-neutral-400 text-left max-w-[300px]">
+          {description}
+        </p>
       </div>
 
       {/* Pricing Section */}
@@ -28,7 +32,9 @@ const PricingCard = ({
         <h1 className="text-3xl text-left text-gradient font-bold">
           {pricingFrom} <span className="text-sm">to {pricingTo}</span>
         </h1>
-        <p className="text-sm text-left text-neutral-400 font-medium">Non-negotiable prices</p>
+        <p className="text-sm text-left text-neutral-400 font-medium">
+          Non-negotiable prices
+        </p>
       </div>
 
       {/* Features List */}
@@ -36,19 +42,26 @@ const PricingCard = ({
         {keyPoints.map((feature, index) => (
           <li key={index} className="flex items-center gap-3">
             <div>
-              <Image src={Star || "/placeholder.svg"} width={20} height={20} alt="check" />
+              <Image
+                src={Star || "/placeholder.svg"}
+                width={20}
+                height={20}
+                alt="check"
+              />
             </div>
-            <p className="text-sm text-left text-white font-medium">{feature}</p>
+            <p className="text-lg text-left text-white font-medium">
+              {feature}
+            </p>
           </li>
         ))}
       </ul>
 
       {/* Action Buttons */}
       <div className="w-full flex flex-col gap-3">
-        <Button className="px-5 py-5 w-full bg-transparent text-white font-bold border-2 border-orange-600">
+        <Button className="w-full px-7 py-6 bg-transparent text-white text-lg font-medium border-2 border-orange-600">
           Check Samples
         </Button>
-        <Button className="px-5 py-5 w-full bg-gradient text-white font-bold">
+        <Button className="px-7 py-6 bg-gradient text-black text-lg font-medium">
           Click to Buy
         </Button>
       </div>

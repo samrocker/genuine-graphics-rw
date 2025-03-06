@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { CapabilitiesGrid, Services } from "@/constants";
 import React from "react";
 import { Button } from "../ui/button";
@@ -18,20 +18,17 @@ const OurCapibilitiesSection = () => {
             </h1>
           </div>
 
-          <div className="py-5 w-full flex-center flex-wrap gap-5">
+          <div className="py-5 w-full flex-center flex-wrap gap-3">
             {Services.map((service, idx) => (
-              <div 
-                key={idx} 
-                className="px-5 py-3 bg-gradient rounded-xl"
-              >
-                <h1 className="text-sm lg:text-lg text-white font-medium">
+              <div key={idx} className="px-5 py-3 bg-gradient rounded-sm">
+                <h1 className="text-sm lg:text-lg text-black font-medium">
                   {service.title}
                 </h1>
               </div>
             ))}
           </div>
 
-          <div className="px-5 py-10 w-full flex-between flex-col lg:flex-row gap-10">
+          <div className="px-5 py-10 w-full flex-between flex-col lg:flex-row gap-10 mt-10">
             <div className="flex-[1] w-full flex flex-col gap-5 items-start justify-center">
               <span className="text-lg text-orange-600 font-medium">
                 Benefits
@@ -55,7 +52,7 @@ const OurCapibilitiesSection = () => {
 
           <div className="px-5 py-5 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {CapabilitiesGrid.map((items, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="p-4 flex flex-col gap-5 items-start justify-center border-r-[1px] border-r-neutral-400/20"
               >
