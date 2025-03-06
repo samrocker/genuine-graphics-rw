@@ -1,0 +1,7 @@
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - "127.0.0.1:6050:6050"
+    restart: unless-stopped
