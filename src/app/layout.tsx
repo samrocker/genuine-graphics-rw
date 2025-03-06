@@ -18,9 +18,9 @@ export default function RootLayout({
       <body
         className={`antialiased bg-[#0A0A0A] w-screen overflow-x-hidden`}
       >
-        {/* <HeaderSection /> */}
-        {/* {children} */}
-        {/* <FooterSection /> */}
+        <HeaderSection />
+        {children}
+        <FooterSection />
       </body>
     </html>
   );
