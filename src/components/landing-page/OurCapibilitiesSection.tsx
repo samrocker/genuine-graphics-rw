@@ -21,7 +21,7 @@ const OurCapibilitiesSection = () => {
           <div className="py-5 w-full flex-center flex-wrap gap-3">
             {Services.map((service, idx) => (
               <div key={idx} className="px-5 py-3 bg-gradient rounded-sm">
-                <h1 className="text-sm lg:text-lg text-black font-medium">
+                <h1 className="text-sm lg:text-lg text-black font-light">
                   {service.title}
                 </h1>
               </div>
@@ -30,21 +30,21 @@ const OurCapibilitiesSection = () => {
 
           <div className="px-5 py-10 w-full flex-between flex-col lg:flex-row gap-10 mt-10">
             <div className="flex-[1] w-full flex flex-col gap-5 items-start justify-center">
-              <span className="text-lg text-orange-600 font-medium">
+              <span className="text-lg uppercase text-orange-600 font-medium">
                 Benefits
               </span>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl text-white text-left font-medium">
+              <h1 className="text-3xl md:text-4xl lg:text-6xl text-white text-left font-semibold">
                 The design subscription that connects you to your dream team
               </h1>
             </div>
-            <div className="flex-[1] w-full flex flex-col gap-5 items-start justify-center">
-              <p className="text-lg text-neutral-400 text-left font-medium">
+            <div className="flex-[1] w-full flex flex-col gap-5 pt-20 items-start justify-center">
+              <p className="text-2xl text-justify text-neutral-400  font-light">
                 A subscription can alleviate the stress of staffing, managing
                 expenses, or make design calls like a Creative Director. We
                 partner with you to ensure that your design elevates your brand
                 to new levels.
               </p>
-              <Button className="px-5 py-5 bg-gradient text-white font-bold">
+              <Button className="px-8 py-6 bg-gradient text-black font-medium">
                 See Pricing
               </Button>
             </div>
@@ -66,7 +66,7 @@ const OurCapibilitiesSection = () => {
                 <h1 className="text-lg text-left text-white font-bold">
                   {items.title as string}
                 </h1>
-                <p className="text-sm text-left text-neutral-400 font-medium max-w-[300px]">
+                <p className="text-sm text-left text-neutral-400 font-light max-w-[300px]">
                   {items.description as string}
                 </p>
               </div>

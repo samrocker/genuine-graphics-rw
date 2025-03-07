@@ -6,7 +6,16 @@ import Image from "next/image";
 const HowWeWorkSection = () => {
   return (
     <section className="min-h-fit w-screen mt-20 relative overflow-hidden">
-      <div className="absolute right-[-100px] md:right-[-150px] top-[22%] md:top-[10%] z-[-1] w-[13rem] md:w-[17rem] lg:w-[20rem] rotate-[230deg] duration-300">
+      <div className="absolute right-[-100px] md:right-[-150px] top-[18%] md:top-[0px] z-[-1] w-[13rem] md:w-[17rem] lg:w-[22rem] rotate-[230deg] duration-300">
+        <Image
+          src="/images/crystal-left.png"
+          alt="hero-crystal-left"
+          width={300}
+          height={300}
+          className="w-full"
+        />
+      </div>
+      <div className="absolute left-[-100px] md:right-[-150px] top-[32%] md:top-[40%] z-[-1] w-[13rem] md:w-[17rem] lg:w-[15rem] rotate-[35deg] duration-300">
         <Image
           src="/images/crystal-left.png"
           alt="hero-crystal-left"
@@ -19,12 +28,12 @@ const HowWeWorkSection = () => {
         <div className="px-5 py-5 h-fit w-full flex flex-col lg:flex-row gap-5 items-center justify-start">
           <div className="h-full flex-[1] w-full flex flex-col items-start justify-center gap-5">
             <span className="text-sm text-gradient font-bold">How We Work</span>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-medium">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-semibold">
               Create a Stunning Brand for Your Discord Shop with Expert GFX
             </h1>
           </div>
           <div className="h-full flex-[1] w-full flex flex-col items-start justify-start gap-5">
-            <p className="text-left text-neutral-400 text-lg font-medium">
+            <p className="text-left text-neutral-400 text-lg font-light">
               Unlock the power of a dedicated design work to elevate your
               Discord server and marketplace branding, product marketing all for
               a fraction of the cost of hiring in-house designers.
@@ -85,7 +94,7 @@ const HowWeWorkSection = () => {
               <h1 className="text-lg md:text-2xl text-white font-medium">
                 {item.title}
               </h1>
-              <p className="text-lg text-neutral-400 font-medium max-w-[400px]">
+              <p className="text-lg text-neutral-400 font-light max-w-[400px]">
                 {item.description}
               </p>
             </div>

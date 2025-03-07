@@ -34,7 +34,7 @@ const BeautifulWorksSection = () => {
           {BeautifulWorks.map((works, idx) => (
             <div
               key={idx}
-              className={`bg-black rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-xl overflow-hidden p-4 flex flex-col items-start gap-4 ${getVerticalOffset(idx)}`}
+              className={`bg-[#1B1B1B] shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-xl overflow-hidden p-4 flex flex-col items-start gap-4 ${getVerticalOffset(idx)}`}
             >
               <h1 className="text-lg md:text-xl font-bold text-white text-left">
                 {works.title}
@@ -44,7 +44,7 @@ const BeautifulWorksSection = () => {
                 alt={works.title}
                 width={1920}
                 height={1080}
-                className="w-full rounded-xl"
+                className="w-full"
               />
             </div>
           ))}
@@ -55,7 +55,7 @@ const BeautifulWorksSection = () => {
           {BeautifulWorks.map((works, idx) => (
             <div
               key={idx}
-              className={`bg-black rounded-3xl shadow-lg transition-transform duration-300 transform overflow-hidden p-4 flex flex-col items-start justify-between gap-5`}
+              className={`bg-[#1B1B1B] shadow-lg transition-transform duration-300 transform overflow-hidden p-4 flex flex-col items-start justify-between gap-5`}
             >
               <h1 className="text-lg md:text-xl font-bold text-white text-left">
                 {works.title}
@@ -65,7 +65,7 @@ const BeautifulWorksSection = () => {
                 alt={works.title}
                 width={1920}
                 height={1080}
-                className="w-full rounded-3xl"
+                className="w-full"
               />
             </div>
           ))}

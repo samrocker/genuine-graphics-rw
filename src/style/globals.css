@@ -1,45 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Reservation Wide";
-  src: url("/client-projects/genuine-graphics/src/fonts/Reservation-Wide/ReservationWide-Regular.woff2") format("woff2"),
-       url("/client-projects/genuine-graphics/src/fonts/Reservation-Wide/ReservationWide-Regular.woff") format("woff"),
-       url("/client-projects/genuine-graphics/src/fonts/Reservation-Wide/ReservationWide-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Reservation Wide";
-  src: url("/client-projects/genuine-graphics/src/fonts/Reservation-Wide/ReservationWide-Bold.woff2") format("woff2"),
-       url("/client-projects/genuine-graphics/src/fonts/Reservation-Wide/ReservationWide-Bold.woff") format("woff"),
-       url("/client-projects/genuine-graphics/src/fonts/Reservation-Wide/ReservationWide-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Reservation Wide";
-  src: url("/client-projects/genuine-graphics/src/fonts/Reservation-Wide/ReservationWide-Black.woff2") format("woff2"),
-       url("/client-projects/genuine-graphics/src/fonts/Reservation-Wide/ReservationWide-Black.woff") format("woff"),
-       url("/client-projects/genuine-graphics/src/fonts/Reservation-Wide/ReservationWide-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Reservation Wide";
-  src: url("/client-projects/genuine-graphics/src/fonts/Reservation-Wide/ReservationWide-Oblique.woff2") format("woff2"),
-       url("/client-projects/genuine-graphics/src/fonts/Reservation-Wide/ReservationWide-Oblique.woff") format("woff"),
-       url("/client-projects/genuine-graphics/src/fonts/Reservation-Wide/ReservationWide-Oblique.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
 
 body {
-  font-family: "Reservation Wide", sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: regular;
+  font-style: normal;
 }
 
 @layer utilities {

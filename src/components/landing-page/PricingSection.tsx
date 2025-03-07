@@ -4,7 +4,7 @@ import { CustomPricing, PremiumPricing, StandardPricing } from "@/constants"
 
 const PricingSection = () => {
   return (
-    <section className="mt-10">
+    <section className="mt-10 pb-20">
       <main className="max-w-[1440px] m-auto">
         <div className="px-5 py-5 min-h-fit flex flex-col items-center text-center gap-10">
           <div className="py-5 w-full flex-center flex-col gap-5">
@@ -14,7 +14,7 @@ const PricingSection = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
               Simple pricing to level up your brand.
             </h1>
-            <p className="text-base md:text-sm text-neutral-400 max-w-[400px]">
+            <p className="text-base md:text-md text-neutral-400 max-w-[400px]">
               Senior experts. On-demand requests. Fast turnarounds. Flat monthly fee. Cancel anytime.
             </p>
           </div>

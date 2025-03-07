@@ -32,7 +32,7 @@ const HeaderSection = () => {
               <div key={idx}>
                 <Link
                   href={item.redirect}
-                  className="text-sm text-white font-medium hover:text-opacity-80 transition-all duration-300"
+                  className="text-sm text-black font-light hover:text-opacity-80 transition-all duration-300"
                 >
                   {item.title}
                 </Link>
@@ -40,7 +40,7 @@ const HeaderSection = () => {
             ))}
             <div>
               <Button 
-                className="px-5 py-5 bg-gradient font-bold"
+                className="px-5 py-5 bg-gradient text-black font-bold"
               >
                 Join Discord
               </Button>
@@ -79,7 +79,7 @@ const HeaderSection = () => {
                   ))}
                   <div>
                     <Button 
-                      className="px-5 py-5 bg-gradient font-bold w-full"
+                      className="px-5 py-5 bg-gradient font-light text-black w-full"
                     >
                       Join Discord
                     </Button>

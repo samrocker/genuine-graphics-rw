@@ -13,26 +13,26 @@ const PricingCard = ({
   keyPoints,
 }: PricingCardProps) => {
   return (
-    <div className="px-7 py-10 min-h-fit w-screen max-w-[430px] flex flex-col gap-8 bg-[#222222] items-start justify-center rounded-xl">
+    <div className="px-7 py-10 min-h-fit w-screen max-w-[380px] flex flex-col gap-8 bg-[#222222] items-start justify-center rounded-xl">
       {/* Header Section */}
       <div className="w-full flex flex-col gap-5 items-start">
         <div className="w-full flex justify-between items-center">
-          <h1 className="text-4xl text-white font-medium">{title}</h1>
-          <Button className="px-5 py-5 bg-gradient text-black font-bold">
+          <h1 className="text-4xl text-white font-semibold">{title}</h1>
+          <Button className="px-5 py-5 bg-gradient text-black font-light">
             Rebrands
           </Button>
         </div>
-        <p className="text-sm text-neutral-400 text-left max-w-[300px]">
+        <p className="text-sm text-neutral-400 font-light text-left max-w-[300px]">
           {description}
         </p>
       </div>
 
       {/* Pricing Section */}
       <div className="px-3 py-5 w-full flex flex-col gap-1 items-start justify-center border-y-[1px] border-orange-600">
-        <h1 className="text-3xl text-left text-gradient font-bold">
-          {pricingFrom} <span className="text-sm">to {pricingTo}</span>
+        <h1 className="text-5xl text-left text-gradient font-bold">
+          {pricingFrom} <span className="text-xl">to {pricingTo}</span>
         </h1>
-        <p className="text-sm text-left text-neutral-400 font-medium">
+        <p className="text-sm text-left text-neutral-400 font-light">
           Non-negotiable prices
         </p>
       </div>
@@ -49,7 +49,7 @@ const PricingCard = ({
                 alt="check"
               />
             </div>
-            <p className="text-lg text-left text-white font-medium">
+            <p className="text-xl text-left text-white font-light">
               {feature}
             </p>
           </li>
@@ -58,7 +58,7 @@ const PricingCard = ({
 
       {/* Action Buttons */}
       <div className="w-full flex flex-col gap-3">
-        <Button className="w-full px-7 py-6 bg-transparent text-white text-lg font-medium border-2 border-orange-600">
+        <Button className="w-full px-7 py-6 bg-transparent text-white text-lg font-light border-2 border-orange-600">
           Check Samples
         </Button>
         <Button className="px-7 py-6 bg-gradient text-black text-lg font-medium">

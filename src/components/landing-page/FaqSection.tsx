@@ -5,6 +5,7 @@ import { ArrowBigDown } from "lucide-react";
 import { useState } from "react";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
+import { SlArrowDown } from "react-icons/sl";
 
 const FaqSection = () => {
   // State to track which FAQ items are open
@@ -38,18 +39,18 @@ const FaqSection = () => {
                     openItems.includes(index) ? "bg-[#222222] rounded-t-3xl" : "bg-[#222222] rounded-3xl"
                   }`}
                 >
-                  <h2 className="text-xl text-left text-white font-medium">{faq.question}</h2>
+                  <h2 className="text-xl text-left text-white font-light">{faq.question}</h2>
                   <div
-                    className={`flex-center rounded-full bg-gradient p-3 transition-transform ${
+                    className={`flex-center rounded-full bg-[#FC6B0A] p-3 transition-transform ${
                       openItems.includes(index) ? "rotate-180" : "rotate-0"
                     }`}
                   >
-                    <ArrowBigDown width={30} height={30} className="text-white" />
+                    <SlArrowDown width={30} height={30} className="text-black" />
                   </div>
                 </div>
                 {openItems.includes(index) && (
-                  <div className="px-6 py-5 bg-[#333333] rounded-b-3xl text-white overflow-hidden">
-                    <p className="text-base md:text-lg">{faq.answer}</p>
+                  <div className="px-6 py-5 bg-[#222222] rounded-b-3xl text-white overflow-hidden">
+                    <p className="text-base md:text-light">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -58,14 +59,14 @@ const FaqSection = () => {
 
           <div className="w-full flex-center flex-col gap-5">
             <Textarea
-              className="min-h-[160px] w-full max-w-[700px] border-[1px] border-black/50"
+              className="min-h-[160px] w-full max-w-[700px] text-2xl border-[1px] border-black/50"
               placeholder="Ask us what you want to know..."
             />
             <div className="w-full max-w-[700px] flex-between">
-              <p className="text-lg text-left text-neutral-500 font-bold max-w-[350px]">
-                We will answer your questions via email within 48 hours.
+              <p className="text-sm text-left text-black font-medium max-w-[350px]">
+                We will answer your questions via email <br /> within 48 hours.
               </p>
-              <Button className="w-28 px-5 py-6 bg-gradient text-white font-bold rounded-full">
+              <Button className="w-28 px-5 py-6 bg-gradient text-black font-bold rounded-full">
                 Send
               </Button>
             </div>
