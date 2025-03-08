@@ -64,7 +64,7 @@ const HeaderSection = () => {
               </motion.div>
             ))}
             <motion.div variants={itemVariants}>
-              <Button className="px-5 py-5 bg-gradient font-bold">Join Discord</Button>
+              <Button className="px-5 py-5 bg-gradient font-bold text-black">Join Discord</Button>
             </motion.div>
           </motion.div>
 
@@ -99,7 +99,7 @@ const HeaderSection = () => {
                     </motion.div>
                   ))}
                   <motion.div variants={itemVariants}>
-                    <Button className="px-5 py-5 bg-gradient font-bold w-full">Join Discord</Button>
+                    <Button className="px-5 py-5 bg-gradient font-bold w-full text-black">Join Discord</Button>
                   </motion.div>
                 </motion.div>
               </SheetContent>
