@@ -1,15 +1,39 @@
 "use client";
 
-import { FaqSectionContent } from "@/constants";
-import { ArrowBigDown } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { SlArrowDown } from "react-icons/sl";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
-import { SlArrowDown } from "react-icons/sl";
+import type { FAQ } from "@/sanity/lib/api";
+import { FaqSectionContent } from "@/constants"; // Keep as fallback
 
 const FaqSection = () => {
   // State to track which FAQ items are open
   const [openItems, setOpenItems] = useState<number[]>([]);
+  // State to store FAQs from Sanity
+  const [faqs, setFaqs] = useState<FAQ[]>([]);
+  // State to track loading status
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Fetch FAQs from API route on component mount
+  useEffect(() => {
+    const fetchFaqs = async () => {
+      try {
+        const response = await fetch('/api/faqs');
+        if (!response.ok) {
+          throw new Error('Failed to fetch FAQs');
+        }
+        const data = await response.json();
+        setFaqs(data);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching FAQs:", error);
+        setIsLoading(false);
+      }
+    };
+
+    fetchFaqs();
+  }, []);
 
   // Toggle function to open/close FAQ items
   const toggleItem = (index: number) => {
@@ -20,6 +44,9 @@ const FaqSection = () => {
     );
   };
 
+  // Use fallback data if Sanity data is not available
+  const faqItems = faqs.length > 0 ? faqs : FaqSectionContent;
+
   return (
     <section className="w-full bg-[#FFFFFF]">
       <main className="max-w-[1440px] m-auto">
@@ -28,33 +55,41 @@ const FaqSection = () => {
           <p className="text-lg text-black mb-4">Providing answers to your questions</p>
 
           <div className="w-full max-w-[700px] flex flex-col gap-4">
-            {FaqSectionContent.map((faq, index) => (
-              <div
-                key={index}
-                className="w-full overflow-hidden transition-all duration-300 ease-in-out"
-              >
+            {isLoading ? (
+              // Loading state
+              <div className="w-full text-center py-8">
+                <p className="text-lg text-black">Loading FAQs...</p>
+              </div>
+            ) : (
+              // Render FAQs
+              faqItems.map((faq, index) => (
                 <div
-                  onClick={() => toggleItem(index)}
-                  className={`px-5 py-5 w-full flex justify-between items-center gap-5 cursor-pointer ${
-                    openItems.includes(index) ? "bg-[#222222] rounded-t-3xl" : "bg-[#222222] rounded-3xl"
-                  }`}
+                  key={index}
+                  className="w-full overflow-hidden transition-all duration-300 ease-in-out"
                 >
-                  <h2 className="text-xl text-left text-white font-light">{faq.question}</h2>
                   <div
-                    className={`flex-center rounded-full bg-[#FC6B0A] p-3 transition-transform ${
-                      openItems.includes(index) ? "rotate-180" : "rotate-0"
+                    onClick={() => toggleItem(index)}
+                    className={`px-5 py-5 w-full flex justify-between items-center gap-5 cursor-pointer ${
+                      openItems.includes(index) ? "bg-[#222222] rounded-t-3xl" : "bg-[#222222] rounded-3xl"
                     }`}
                   >
-                    <SlArrowDown width={30} height={30} className="text-black" />
+                    <h2 className="text-xl text-left text-white font-light">{faq.question}</h2>
+                    <div
+                      className={`flex-center rounded-full bg-[#FC6B0A] p-3 transition-transform ${
+                        openItems.includes(index) ? "rotate-180" : "rotate-0"
+                      }`}
+                    >
+                      <SlArrowDown width={30} height={30} className="text-black" />
+                    </div>
                   </div>
+                  {openItems.includes(index) && (
+                    <div className="px-6 py-5 bg-[#222222] rounded-b-3xl text-white overflow-hidden">
+                      <p className="text-base md:text-light">{faq.answer}</p>
+                    </div>
+                  )}
                 </div>
-                {openItems.includes(index) && (
-                  <div className="px-6 py-5 bg-[#222222] rounded-b-3xl text-white overflow-hidden">
-                    <p className="text-base md:text-light">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
+              ))
+            )}
           </div>
 
           <div className="w-full flex-center flex-col gap-5">

@@ -1,13 +1,14 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { Button } from "../ui/button";
-import Image from "next/image";
-import { Loader2 } from "lucide-react";
+import { beautifulWorksQuery } from "@/lib/sanity.queries";
+import { BeautifulWork } from "@/sanity/lib/api";
 import { client } from "@/sanity/lib/client";
-import { beautifulWorksQuery, BeautifulWork } from "@/lib/sanity.queries";
+import React, { useEffect, useState } from "react";
 import SignatureThumb from "../../../public/images/signature-thumb.png";
+import { Loader2 } from "lucide-react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
-const BeautifulWorksSection = () => {
+const OurWorksPage = () => {
   const [works, setWorks] = useState<BeautifulWork[]>([]);
   const [loading, setLoading] = useState(true);
   const [visibleWorks, setVisibleWorks] = useState(8);
@@ -37,9 +38,8 @@ const BeautifulWorksSection = () => {
   const getVerticalOffset = (idx: number) => {
     return idx % 2 === 0 ? "translate-y-5" : "-translate-y-3";
   };
-
   return (
-    <section className="w-full bg-[#FFFFFF] pt-16">
+    <section className="w-full bg-[#FFFFFF] pt-28">
       <main className="max-w-[1440px] mx-auto">
         <div className="px-5 py-5 min-h-fit flex flex-col items-center text-center gap-6">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
@@ -99,7 +99,7 @@ const BeautifulWorksSection = () => {
 
               {/* Load More Button */}
               {visibleWorks < works.length && (
-                <Button 
+                <Button
                   onClick={handleLoadMore}
                   className="py-5 px-6 bg-transparent hover:bg-black/10 flex-center border border-black text-black text-lg mt-5"
                 >
@@ -114,4 +114,4 @@ const BeautifulWorksSection = () => {
   );
 };
 
-export default BeautifulWorksSection;
+export default OurWorksPage;

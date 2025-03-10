@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
@@ -7,8 +7,20 @@ import { Facebook, Instagram, X } from "lucide-react";
 import EmailIcon from "../../../public/icons/email.png";
 import PhoneIcon from "../../../public/icons/phone.png";
 import { FooterSectionContent } from "@/constants";
+import { usePathname } from "next/navigation";
 
 const FooterSection = () => {
+  const pathname = usePathname();
+
+  const hiddenPaths = [/^\/profile(\/.*)?$/, /^\/policies(\/.*)?$/] as RegExp[];
+
+  const isHiddenPath = hiddenPaths.some((pattern) => pattern.test(pathname));
+
+  if (isHiddenPath) {
+    console.log("Hidden path detected, returning null...");
+    return null;
+  }
+
   return (
     <footer className="mt-10 text-white py-12">
       <div className="container mx-auto px-4">
