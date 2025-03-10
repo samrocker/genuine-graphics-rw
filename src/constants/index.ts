@@ -1,23 +1,19 @@
 export const headerContent = [
   {
-    title: "Price",
-    redirect: "/price",
-  },
-  {
     title: "Our Works",
-    redirect: "/works",
+    redirect: "/our-works",
   },
   {
-    title: "Services",
-    redirect: "/services",
+    title: "Signature banners",
+    redirect: "/signature-banners",
   },
   {
-    title: "Packages",
-    redirect: "/packages",
+    title: "Animated services",
+    redirect: "/animated-services/",
   },
   {
-    title: "FAQ",
-    redirect: "/FAQ",
+    title: "Non animated services",
+    redirect: "/non-animated-services",
   },
 ];
 

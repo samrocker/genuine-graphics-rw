@@ -33,16 +33,16 @@ const OurCapibilitiesSection = () => {
               <span className="text-lg uppercase text-orange-600 font-medium">
                 Benefits
               </span>
-              <h1 className="text-3xl md:text-4xl lg:text-6xl text-white text-left font-semibold">
-                The design subscription that connects you to your dream team
+              <h1 className="text-3xl md:text-4xl lg:text-5xl text-white text-left font-semibold">
+                High-quality designs that elevate your brand and drive lasting
+                impact.
               </h1>
             </div>
             <div className="flex-[1] w-full flex flex-col gap-5 pt-20 items-start justify-center">
               <p className="text-2xl text-justify text-neutral-400  font-light">
-                A subscription can alleviate the stress of staffing, managing
-                expenses, or make design calls like a Creative Director. We
-                partner with you to ensure that your design elevates your brand
-                to new levels.
+                Working with us gives you custom, eye-catching graphics for your
+                Discord server and professional branding solutions that help
+                sellers stand out.
               </p>
               <Button className="px-8 py-6 bg-gradient text-black font-medium">
                 See Pricing

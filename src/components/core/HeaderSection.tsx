@@ -48,19 +48,22 @@ const HeaderSection = () => {
       <main className="max-w-[1440px] m-auto">
         <div className="px-5 py-7 w-full flex-between">
           {/* Logo */}
-          <div className="flex-[1] w-full flex-start">
-            <h1 className="text-xl lg:text-2xl text-white font-normal">
+          <div className="min-w-fit flex-start">
+            <Link
+              href={"/"}
+              className="text-xl lg:text-2xl text-white font-normal"
+            >
               Genuine <span className="text-gradient">Graphics</span>
-            </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="flex-[1] w-full hidden lg:flex-end gap-7">
+          <div className="w-full hidden lg:flex-end gap-7">
             {headerContent.map((item, idx) => (
               <div key={idx}>
                 <Link
                   href={item.redirect}
-                  className="text-sm text-white font-light hover:text-opacity-80 transition-all duration-300"
+                  className="text-lg text-white font-light hover:text-opacity-80 transition-all duration-300"
                 >
                   {item.title}
                 </Link>

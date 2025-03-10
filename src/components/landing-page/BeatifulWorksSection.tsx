@@ -70,7 +70,7 @@ const BeautifulWorksSection = () => {
                       alt={work.title}
                       width={1920}
                       height={1080}
-                      className="w-full"
+                      className="w-full rounded-lg"
                     />
                   </div>
                 ))}
@@ -91,7 +91,7 @@ const BeautifulWorksSection = () => {
                       alt={work.title}
                       width={1920}
                       height={1080}
-                      className="w-full"
+                      className="w-full rounded-lg"
                     />
                   </div>
                 ))}
